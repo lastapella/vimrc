@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pe", "<cmd>NvimTreeOpen<CR>")
+vim.keymap.set("n", "<leader>pe", "<cmd>NvimTreeToggle<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -45,4 +45,9 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 
-vim.keymap.set("n", "<leader>t", "ggVG")
+vim.keymap.set("n", "<leader>a", "ggVG")
+vim.keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>")
+vim.keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>r", "<cmd>NvimTreeFindFile<CR>")
+vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
