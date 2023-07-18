@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
     'daltonmenezes/aura-theme',
     rtp = 'packages/neovim',
     config = function()
-      vim.cmd("colorscheme aura-dark")       -- Or any Aura theme available
+      vim.cmd("colorscheme aura-dark") -- Or any Aura theme available
     end
   }
 
@@ -49,25 +49,25 @@ return require('packer').startup(function(use)
     branch = 'v2.x',
     requires = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },       -- Required
-      {                                  -- Optional
+      { 'neovim/nvim-lspconfig' }, -- Required
+      {                            -- Optional
         'williamboman/mason.nvim',
         run = function()
           pcall(vim.cmd, 'MasonUpdate')
         end,
       },
-      { 'williamboman/mason-lspconfig.nvim' },       -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },           -- Required
-      { 'hrsh7th/cmp-nvim-lsp' },       -- Required
-      { 'L3MON4D3/LuaSnip' },           -- Required
+      { 'hrsh7th/nvim-cmp' },     -- Required
+      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+      { 'L3MON4D3/LuaSnip' },     -- Required
     }
   }
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons',       -- optional
+      'nvim-tree/nvim-web-devicons', -- optional
     },
   }
   use {
@@ -82,4 +82,12 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use('airblade/vim-gitgutter')
+  use('folke/trouble.nvim')
+  use('lukas-reineke/indent-blankline.nvim')
+
+
+  use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+  use 'lewis6991/gitsigns.nvim'     -- OPTIONAL: for git status
+  use 'romgrk/barbar.nvim'
+  use "sindrets/diffview.nvim"
 end)
