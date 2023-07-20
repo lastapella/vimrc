@@ -25,7 +25,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set("n", "Q", "<nop>")
 
 -- need tmux
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
@@ -52,3 +52,8 @@ vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>r", "<cmd>NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 vim.keymap.set("n", "<BS>", "<cmd>nohlsearch<CR>")
+
+vim.keymap.set("i", "jk", "<Esc><Esc>")
+vim.keymap.set("n", "<leader>6", "<c-^>")
+vim.keymap.set("n", "<leader>4", "$")
+

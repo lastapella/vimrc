@@ -90,4 +90,5 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'     -- OPTIONAL: for git status
   use 'romgrk/barbar.nvim'
   use "sindrets/diffview.nvim"
+  use 'nvim-treesitter/nvim-treesitter-context'
 end)
